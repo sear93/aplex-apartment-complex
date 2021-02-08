@@ -1,0 +1,29 @@
+{
+  "name": "aplex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontity project",
+  "keywords": [
+    "frontity"
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "dev": "frontity dev",
+    "build": "frontity build",
+    "serve": "frontity serve"
+  },
+  "prettier": {},
+  "dependencies": {
+    "@frontity/core": "^1.10.1",
+    "@frontity/html2react": "^1.6.1",
+    "@frontity/tiny-router": "^1.3.1",
+    "@frontity/wp-source": "^1.11.1",
+    "aplex-apartment-complex": "file:packages/aplex-apartment-complex",
+    "frontity": "^1.14.1",
+    "react-hook-form": "^6.15.1",
+    "swiper": "^6.4.10"
+  }
+}
