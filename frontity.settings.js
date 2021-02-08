@@ -16,8 +16,6 @@ const settings = {
             "state": {
                 "source": {
                     "api": "https://wp-dev.space/education/frontity/develop/wp-json/",
-                    "homepage": "/",
-                    "postsPage": "blog",
                 }
             }
         },

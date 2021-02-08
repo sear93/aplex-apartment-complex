@@ -24,6 +24,6 @@
     "aplex-apartment-complex": "file:packages/aplex-apartment-complex",
     "frontity": "^1.14.1",
     "react-hook-form": "^6.15.1",
-    "swiper": "^6.4.10"
+    "react-slick": "^0.28.0"
   }
 }

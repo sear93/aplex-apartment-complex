@@ -1,9 +1,11 @@
 import {css, Global, styled} from "frontity";
+import Link from '@frontity/components/link';
 
 export const GlobalStyles = () => {
     return (
         <>
             <Global styles={css`
+
               *,
               *::before,
               *::after {
@@ -59,14 +61,29 @@ export const LoaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute; 
-  width: 100%; 
-  height: 100%; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); 
-  z-index: 2; 
-  cursor: pointer; 
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+`
+
+export const Button = styled(Link)`
+  font-size: 18px;
+  line-height: 54px;
+  font-weight: 300;
+  text-align: center;
+  background-color: #ff9700;
+  text-transform: uppercase;
+  padding: 15px 50px;
+  cursor: pointer;
+
+  a {
+    color: #ffffff;
+  }
 `

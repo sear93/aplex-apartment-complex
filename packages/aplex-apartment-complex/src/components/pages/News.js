@@ -1,12 +1,12 @@
 import React from 'react';
-import {connect} from "frontity";
+import {withStateAndAcfOptions} from "../handlers/withACFoptions";
 
 const News = (props) => {
 
     const data = props.state.source.get(props.state.router.link);
     const page = props.state.source[data.type][data.id];
 
-    console.log(data)
+    console.log(props.acfOptions)
 
     return (
         <>
@@ -15,4 +15,4 @@ const News = (props) => {
     );
 };
 
-export default connect(News)
+export default withStateAndAcfOptions(News);
