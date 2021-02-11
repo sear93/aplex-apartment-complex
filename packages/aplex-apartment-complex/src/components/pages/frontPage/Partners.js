@@ -1,10 +1,10 @@
 import React from 'react';
-import {connect, styled} from "frontity";
+import {styled} from "frontity";
 import Slider from "react-slick";
 import {Container} from "../../styled/global";
 import {withStateAndAcfOptions} from "../../handlers/withACFoptions";
 
-const Partners = ({acfOptions}) => {
+const Partners = (props) => {
 
     const settings = {
         dots: true,
@@ -17,9 +17,9 @@ const Partners = ({acfOptions}) => {
     return (
         <PartnersContainer>
             <Container>
-                <h2>{acfOptions.acf.partners_title}</h2>
+                <h2>{props.acfOptions.acf.partners_title}</h2>
                 <Slider {...settings}>
-                    {acfOptions.acf.partners_slider.map((item, i) => {
+                    {props.acfOptions.acf.partners_slider.map((item, i) => {
                         return (
                             <div className={"partners-slide"} key={i}>
                                 <img src={item.url} alt={item.title} />
@@ -46,6 +46,8 @@ const PartnersContainer = styled.div`
   
   .partners-slide {
     outline: none;
+    display: flex !important;
+    justify-content: center;
   }
 `
 

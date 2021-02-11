@@ -1,15 +1,18 @@
 import React from 'react';
-import {connect} from "frontity";
+import {Container} from "./styled/global";
+import {withStateAndAcfOptions} from "./handlers/withACFoptions";
 
 const Is404 = (props) => {
 
-    const data = props.state.source.get(props.state.router.link);
+    const urlData = props.state.source.get(props.state.router.link);
 
     return (
         <>
-            <h2>Oops! Its 404 page</h2>
+            <Container>
+                <h2>Oops! Its {urlData.errorStatus} page</h2>
+            </Container>
         </>
     );
 };
 
-export default connect(Is404)
+export default withStateAndAcfOptions(Is404)

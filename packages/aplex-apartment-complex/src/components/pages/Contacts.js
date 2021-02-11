@@ -1,18 +1,25 @@
 import React from 'react';
-import {connect} from "frontity";
+import {withStateAndAcfOptions} from "../handlers/withACFoptions";
+import {Container} from "../styled/global";
+import {pageTransition, pageVariants} from "../styled/pageTransitions";
+import {motion} from "framer-motion";
 
 const Contacts = (props) => {
 
-    const data = props.state.source.get(props.state.router.link);
-    const page = props.state.source[data.type][data.id];
-
-    console.log(page)
+    const urlData = props.state.source.get(props.state.router.link);
+    const currentData = props.state.source[urlData.type][urlData.id];
 
     return (
-        <>
-            <h1>It's custom {page.title.rendered} {page.type} </h1>
-        </>
+        <motion.div initial={"out"}
+                    animate={"in"}
+                    exit={"out"}
+                    variants={pageVariants}
+                    transition={pageTransition}>
+            <Container>
+                <h1>It's custom {currentData.title.rendered} {currentData.type} </h1>
+            </Container>
+        </motion.div>
     );
 };
 
-export default connect(Contacts)
+export default withStateAndAcfOptions(Contacts)

@@ -6,7 +6,6 @@ export const withStateAndAcfOptions = (Component) => {
     const WithStateAndAcfOptions = (props) => {
 
         const options = props.state.source.get("acf-options-page");
-        const data = props.state.source.get(props.state.router.link);
 
         return <Component {...props} acfOptions={options}/>
     }

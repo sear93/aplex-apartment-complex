@@ -82,8 +82,6 @@ export const Button = styled(Link)`
   text-transform: uppercase;
   padding: 15px 50px;
   cursor: pointer;
-
-  a {
-    color: #ffffff;
-  }
+  font-family: "Ubuntu", sans-serif;
+  color: #ffffff;
 `

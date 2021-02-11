@@ -9,7 +9,12 @@ const settings = {
     },
     "packages": [
         {
-            "name": "aplex-apartment-complex"
+            "name": "aplex-apartment-complex",
+            "state": {
+                "theme": {
+                    "autoPrefetch": "in-view"
+                },
+            },
         },
         {
             "name": "@frontity/wp-source",

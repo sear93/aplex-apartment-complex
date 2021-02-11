@@ -2,11 +2,8 @@ import React from 'react';
 import Hero from "./Hero";
 import About from "./About";
 import Partners from "./Partners";
-import {withStateAndAcfOptions} from "../../handlers/withACFoptions";
 
-const FrontPage = ({state}) => {
-
-    const data = state.source.get(state.router.link);
+const FrontPage = () => {
 
     return (
         <>
@@ -17,4 +14,4 @@ const FrontPage = ({state}) => {
     );
 };
 
-export default withStateAndAcfOptions(FrontPage)
+export default FrontPage
